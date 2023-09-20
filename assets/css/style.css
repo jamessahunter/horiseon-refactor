@@ -1,13 +1,14 @@
+/* Universal tag makes sure website fills out the whole page */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-
+/* sets the background color */
 body {
     background-color: #d9dcd6;
 }
-
+/* sets color, font and pads around header */
 header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -15,13 +16,16 @@ header {
     color: #ffffff;
 
 }
+/* sets font size and keeps text inline */
 h1{
     display: inline-block;
     font-size: 48px;
 }
+/* changes color of the seo in Horiseon */
 #seo {
     color: #d9dcd6;
 }
+/* sets font type and size, gets rid of bullets, moves text right adds margin */
 nav {
     padding-top: 15px;
     margin-right: 20px;
@@ -30,20 +34,21 @@ nav {
     font-size: 20px;
     list-style-type: none;
 }
+/* keeps text inline and adds margin */
 li {
     display: inline-block;
     margin-left: 25px;
 }
-
+/* keeps text color white and removes underline */
 a {
     color: #ffffff;
     text-decoration: none;
 }
-
+/* sets font size */
 p {
     font-size: 16px;
 }
-
+/* sets height width and margin and positions image and ensures it fits on website */
 .marketing-image {
     height: 800px;
     width: 100%;
@@ -52,23 +57,41 @@ p {
     background-size: cover;
     background-position: center;
 }
-
+/* floats left */
 .float-left {
     float: left;
     margin-right: 25px;
 }
-
+/* floats right */
 .float-right {
     float: right;
     margin-left: 25px;
 }
-
+/* has content fill 75% with a margin on the left */
 .content {
     width: 75%;
     display: inline-block;
     margin-left: 20px;
 }
-
+/* sets margin, padding, font, color and height for content */
+.content-sections {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+/* sets height of images */
+.content-sections img {
+    max-height: 200px;
+}
+/* sets margins and font size for h2 */
+h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+/* has benefits fill 20% and floats right with margin and sets font and color */
 .benefits {
     margin-right: 20px;
     padding: 20px;
@@ -79,42 +102,24 @@ p {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #2589bd;
 }
-
+/* sets mrgins and colot */
 .benefit-types{
     margin-bottom: 32px;
     color: #ffffff;
 }
-
-.benefit-types h3 {
+/* sets margin and centers text */
+h3 {
     margin-bottom: 10px;
     text-align: center;
 }
-
+/* sets to block display and height and margin*/
 .benefit-types img {
     display: block;
     margin: 10px auto;
     max-width: 150px;
 }
-
-.content-sections {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.content-sections img {
-    max-height: 200px;
-}
-
-.content-sections h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.footer {
+/* sets padding, font style and size and moves footer below*/
+footer {
     padding: 30px;
     clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
