@@ -8,22 +8,21 @@ body {
     background-color: #d9dcd6;
 }
 
-.header {
+header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #2a607c;
     color: #ffffff;
 
 }
-.header h1{
+h1{
     display: inline-block;
     font-size: 48px;
 }
 #seo {
     color: #d9dcd6;
 }
-
-.header ul {
+nav {
     padding-top: 15px;
     margin-right: 20px;
     float: right;
@@ -31,7 +30,7 @@ body {
     font-size: 20px;
     list-style-type: none;
 }
-.header ul li {
+li {
     display: inline-block;
     margin-left: 25px;
 }
@@ -45,7 +44,7 @@ p {
     font-size: 16px;
 }
 
-.hero {
+.marketing-image {
     height: 800px;
     width: 100%;
     margin-bottom: 25px;
