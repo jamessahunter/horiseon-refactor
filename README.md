@@ -4,39 +4,21 @@
 
 | Technology Used         | Resource URL           | 
 | ------------- |:-------------:| 
-| HTML    | [https://developer.mozilla.org/en-US/docs/Web/HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) | 
-| CSS     | [https://developer.mozilla.org/en-US/docs/Web/CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)      |   
+| HTML    | [https://www.w3schools.com/html/](https://www.w3schools.com/html/) | 
+| CSS     | [https://www.w3schools.com/css/default.asp](https://www.w3schools.com/css/default.asp)      |   
 | Git | [https://git-scm.com/](https://git-scm.com/)     |    
 
 ## Description 
 
-[Visit the Deployed Site]https://jamessahunter.github.io/horiseon-refactor/
+[Visit the Deployed Site] https://jamessahunter.github.io/horiseon-refactor/
 
-Your GitHub profile is an extremely important aspect of your public identity as a developer. A well-crafted one allows you to show off your work to other developers as well as potential employers. An important component of your GitHub profile—and one that many new developers often overlook—is the README.md file.
+The project was to refactor the given code for the Horiseon website. The main reason was to make the website follow accessiblity standards such as using semantic HTML elements, header size decreasing sequetially, add alt attributes to images and have the code follow a logical structure. This was done by changing out the div elements and replacing them with their relevant semantic counterparts as shown in the example below. The images had alt attributes added the provides a brief descrpiton of the image. The CSS file was also reorganized and consolidated so the elements appeared in the same order as in the HTML file and reduced any clutter by combining duplicates into one class also shown below.  
 
-The quality of a README often differentiates a good project from a bad project. A good one takes advantage of the opportunity to explain and showcase what your application does, justify the technologies used, and even talk about some of the challenges you faced and features you hope to implement in the future. A good README helps you stand out among the large crowd of developers putting their work on GitHub.
-
-There's no one right way to structure a good README. There is one very wrong way, however, and that is to not include a README at all or to create a very anemic one. This guide outlines a few best practices. As you progress in your career, you will develop your own ideas about what makes a good README.
-
-At a minimum, your project README needs a title and a short description explaining the what, why, and how. What was your motivation? Why did you build this project? (Note: The answer is not "Because it was a homework assignment.") What problem does it solve? What did you learn? What makes your project stand out? 
-
-## Table of Contents (Optional)
-
-If your README is very long, add a table of contents to make it easy for users to find what they need.
-
-* [Code Refactor Example](#code-refactor-example)
-* [Usage](#usage)
-* [Learning Points](#learning-points)
-* [Author Info](#author-info)
-* [Credits](#credits)
-* [License](#license)
-
-
-## Code Refactor Example
+## Code Refactor HTML Example
 
 What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
 
-
+ The given HTML file uses the div element which is non-semantic. To learn more about semantic elements use this link (https://www.w3schools.com/html/html5_semantic_elements.asp).
 ```html
 <div class="header">
         <h1>Hori<span class="seo">seo</span>n</h1>
@@ -56,7 +38,7 @@ What are the steps required to install your project? Provide a step-by-step desc
     </div>
 ```
 
-Converting the above non-semantic div with the class of 'header' to an appropriate [<header> semantic element](https://www.w3schools.com/html/html5_semantic_elements.asp). 
+Converting the above non-semantic div with the class of 'header' to use the semantic element of header as well as adding in the nav element to replace the second div element
 
 ```html
     <header>
@@ -77,7 +59,7 @@ Converting the above non-semantic div with the class of 'header' to an appropria
     </header>
 ```
 
-This change require some additional modification to the CSS selector: 
+Due to the change in the HTML file the CSS file need to be changed as the section was no longer using a class selector  one can just use the element selector of header.
 
 ```css
 .header {
@@ -87,9 +69,7 @@ This change require some additional modification to the CSS selector:
     color: #ffffff;
 }
 ```
-
-No longer targeting the element on the page with the class of 'header' but instead the css selector targeting the 'header' element 
-
+This change is seen by the removal of the '.' before header.
 ```css
 header {
     padding: 20px;
@@ -99,93 +79,97 @@ header {
 }
 
 ```
+## Code Refactor CSS Example
+The provided code below has multiple classes that are unessecary as they are repetitive. The classes are also not in the order they appear in the HTML file
+```css
 
-## Usage 
+.benefit-lead img {
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;
+}
 
-Provide instructions and examples for use. Include screenshots as needed. 
+.benefit-brand img {
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;
+}
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+.benefit-cost img {
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;
+}
 
-```md
-![alt text](assets/images/screenshot.png)
+.search-engine-optimization {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+
+.online-reputation-management {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+
+.social-media-marketing {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+```
+The classes have been consolidated and renamed. They classes have also been reorder to appear as they do in the HTML file.
+```css
+/* sets height of images */
+.content-sections img {
+    max-height: 200px;
+}
+/* sets margins and font size for h2 */
+h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+/* has benefits fill 20% and floats right with margin and sets font and color */
+.benefits {
+    margin-right: 20px;
+    padding: 20px;
+    clear: both;
+    float: right;
+    width: 20%;
+    height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #2589bd;
+}
 ```
 
+## Usage 
+ The website should load and scroll up and down. The links in the header take you to the correct sections. 
+
+ An example of how the website should perform is in the gif below.
+
+![Usage Example](./assets/Horiseon.gif)
 
 ## Learning Points 
 
-
-This is a good place to Explain what you Learned by creating this application.
-This is a great way to remind about all of the Complex Skills you now have.
-If the user is less experienced than you:
-They will be impressed by what you can do!
-
-If the user is more experienced than you:
-They will be impressed by what you can do!
-
-Remember, it is easy to forget exactly how Valuable and Impressive your skills are, as well as How Much You’ve Learned!
-So quantify that here!
-
+Learned about semantic HTML elements and how to link to a different part of the website
 
 ## Author Info
 
-```md
-### Farley Wittles 
-
-
-* [Portfolio](https://youtu.be/bHX54GCrDB4)
-* [LinkedIn](https://youtu.be/bHX54GCrDB4)
-* [Github](https://youtu.be/bHX54GCrDB4)
-```
-
-The user has looked through your whole README, and gotten familiar with your application. 
-This is where you take credit, and make it easy for them to learn more about you!
-Direct them to the following:
-- Your GitHub Profile
-- Your LinkedIn
-- Your Portfolio Website
-- And Anything Else You Want!
-
-Give credit where credit is due! 
-
-If you Pseudocode or Pair Program with someone else, give them kudos in your Contributors section!
-
+### James Hunter
+* [LinkedIn](https://www.linkedin.com/in/james-hunter123/)
+* [Github](https://github.com/jamessahunter)
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
-
-
-## License
-
-The last section of a good README is a license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, use [https://choosealicense.com/](https://choosealicense.com/)
-
-
----
-
-🏆 The sections listed above are the minimum for a good README, but your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
-
-Badges aren't _necessary_, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
-## Features
-
-If your project has a lot of features, consider adding a heading called "Features" and listing them there.
-
-## Contributing
-
-If you created an application or package and would like other developers to contribute it, you will want to add guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own.
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them.
-
----
-
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+Jerome Chenette for providing the original code
+* [Github](https://github.com/jeromechenette)
