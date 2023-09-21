@@ -8,7 +8,7 @@
 body {
     background-color: #d9dcd6;
 }
-/* sets color, font and pads around header */
+/* sets header color, font and pads around header */
 header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -16,7 +16,7 @@ header {
     color: #ffffff;
 
 }
-/* sets font size and keeps text inline */
+/* sets h1 font size and keeps text inline */
 h1{
     display: inline-block;
     font-size: 48px;
@@ -44,7 +44,7 @@ a {
     color: #ffffff;
     text-decoration: none;
 }
-/* sets font size */
+/* sets paragraph font size */
 p {
     font-size: 16px;
 }
